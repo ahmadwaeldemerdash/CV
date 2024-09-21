@@ -16,7 +16,7 @@
     animation-name:header;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 50px;
     font-weight: bold;
    
@@ -34,4 +34,19 @@
 
 .card_container:hover{
     transform: scale(1.10)
+}
+
+#font {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+.size {
+    font-size: 20px;
+}
+.spacing{
+    padding: 10px;
+}
+
+.padding {
+    padding: 10px
 }

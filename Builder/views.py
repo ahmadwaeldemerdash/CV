@@ -54,3 +54,6 @@ def logout_view(request):
     logout(request)
     url = reverse("index")
     return HttpResponseRedirect(url)
+
+def template(request):
+    return render(request, 'Builder/template1.html')
