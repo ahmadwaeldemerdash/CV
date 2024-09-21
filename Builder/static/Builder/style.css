@@ -1,0 +1,37 @@
+.body {
+    
+    margin: 20px
+    
+}
+@keyframes header{
+    from {
+        left: 0%
+    }
+    to {
+        left: 35%
+    }
+}
+#home_header {
+    position: relative;
+    animation-name:header;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    font-family: sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+   
+}
+.slogan {
+    text-align: center;
+    font-size: 25px;
+    font-family: Georgia,'Times New Roman', Times, serif;
+    
+}
+
+.card_container{
+    transition: all 0.3s ease;
+}
+
+.card_container:hover{
+    transform: scale(1.10)
+}

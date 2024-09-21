@@ -1,0 +1,36 @@
+{% extends 'Builder/layout.html' %}
+
+{% block body %}
+<div class="body">
+
+  <form action="{% url 'register' %}" method="post">
+    {% if message %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{ message }}
+    </div>
+    {% endif %}
+    {% csrf_token %}
+      <div class="form-group">
+      <label>Username</label>
+      <input type="text" class="form-control" id="exampleInputEmail1"  name="username" placeholder="Username">
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" id="exampleInputEmail1"  name="email" placeholder="Email">
+        </div>
+
+      <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+      </div>
+      
+      <div class="form-group">
+    <label for="exampleInputPassword1">Confirm Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" name="confirm" placeholder="Confirm Password">
+      </div>
+      <button type="submit" class="btn btn-primary">Register</button>
+      </div>
+  </form>
+</div>
+{% endblock %}
