@@ -55,5 +55,10 @@ def logout_view(request):
     url = reverse("index")
     return HttpResponseRedirect(url)
 
-def template(request):
-    return render(request, 'Builder/template1.html')
+def template(request, title):
+    if title == "junior":
+        return render(request, 'Builder/Junior.html')   
+    elif title == 'senior':
+        return render(request, 'Builder/senior.html')
+    else:
+        return render(request, 'Builder/UX.html')
