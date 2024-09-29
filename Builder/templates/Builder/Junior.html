@@ -4,7 +4,8 @@
     Senior Developer Template 
 {% endblock %}
 {% block body %}
-    <div class="padding">
+
+<div class="padding">
     <div id="font">
     <h1 style="text-align: center;" class="change">Your Name</h1>
     <h3 style="text-align: center;">Junior Software Engineer</h3>
@@ -21,34 +22,36 @@
     <p><h1>Activities</h1></p>
     <hr style="border: 1px solid grey"></hr>
     <ul>
-        <li><div class="size" style="position: relative;"><b>Leetcode</b> <span style="position: absolute; right: 744px;"><b>Solved <b class="change">Num</i> Problems</i> (<i class="change">Num</i> Easy, <i class="change">Num</i> Medium, <i class="change">Num</i> Hard)</span></div></li>
-        <li><div class="size" style="position: relative;"><b>CodeForces</b> <span style="position: absolute; right: 1100px;"><b>Solved <i class="change">Num</i> Problems</b></span></div></li>
+        <li><div class="size" style="position: relative;"><b>Leetcode</b> <span class="width">Solved <i class="change">Num</i> Problems</i> (<i class="change">Num</i> Easy, <i class="change">Num</i> Medium, <i class="change">Num</i> Hard)</span></div></li>
+        <li><div class="size" style="position: relative;"><b>CodeForces</b> <span class="width">Solved <i class="change">Num</i> Problems</b></span></div></li>
     </ul>
     <p><h1>Technical Skills</h1></p>
     <hr style="border: 1px solid grey"></hr>
     <ul>
-        <li><div class="size" style="position: relative;"><b>Programming</b> <span style="position: absolute; right: 1039px;"><i class="change">Programming Language(s) Ex. C#</i></span></div></li>
-        <li><div class="size" style="position: relative;"><b>Frameworks</b> <span style="position: absolute; right: 1115px;"><i class="change">Framework(s) Ex.Django</i></span></div></li>
-        <li><div class="size" style="position: relative;"><b>Operating Systems</b> <span style="position: absolute; right: 1039px;"><i class="change">Operating System(s) Ex.Windows</i></span></div></li>
-        <li><div class="size" style="position: relative;"><b>Databases</b> <span style="position: absolute; right: 1103px;"><i class="change">Databases Ex. PostgreSQL</i></span></div></li>
-        <li><div class="size" style="position: relative;"><b>Tools</b> <span style="position: absolute; right: 1240px;"><i class="change">Tool(s) Ex.</i></span></div></li>
+        <li><div class="size" style="position: relative;"><b>Programming</b> <span class="width"><i class="change">Programming Language(s) Ex. C#</i></span></div></li>
+        <li><div class="size" style="position: relative;"><b>Frameworks</b> <span class="width"><i class="change">Framework(s) Ex.Django</i></span></div></li>
+        <li><div class="size" style="position: relative;"><b>Operating Systems</b> <span class="width"><i class="change">Operating System(s) Ex.Windows</i></span></div></li>
+        <li><div class="size" style="position: relative;"><b>Databases</b> <span class="width"><i class="change">Databases Ex. PostgreSQL</i></span></div></li>
+        <li><div class="size" style="position: relative;"><b>Tools</b><span class="width"><i class="change">Tool</i></span></div></li>
         </div>
         <h1>Projects</h1>
         <hr style="border: 1px solid grey"></hr>
         <ul>
-            <li><div class="size"style="position: relative;"><b>Project Name 1</b> <span style="position:absolute; right: 870px;"><i class="change">Short description of the project, key technologies used.</i></span></div></li>
-            <li><div class="size" style="position: relative;"><b>Project Name 2</b> <span style="position: absolute; right: 870px;"><i class="change">Short description of the project, key technologies used.</i></span></div></li>
-            <li><div class="size" style="position: relative;"><ib>Project Name 3</b> <span style="position: absolute; right: 870px;"><i class="change">Short description of the project, key technologies used.</i></span></div></li>
+            <li><div class="size"style="position: relative;"><b>Project Name 1</b><span class="width"><i class="change">Short description of the project, key technologies used.</i></span></div></li>
+            <li><div class="size" style="position: relative;"><b>Project Name 2</b><span class="width"><i class="change">Short description of the project, key technologies used.</i></span></div></li>
+            <li><div class="size" style="position: relative;"><b>Project Name 3</b><span class="width"><i class="change">Short description of the project, key technologies used.</i></span></div></li>      
         </ul>
 
 
         <h1>Education</h1>
         <hr style="border: 1px solid grey"></hr>
         <ul>
-            <li><div class="size" style="position: relative;"><b>University Name</b> <span style="position: absolute; right: 1130px;"><i class="change">Degree, Year of Graduation</i></span></div></li>
-            <li><div class="size" style="position: relative;"><b>Relevant Courses</b> <span style="position: absolute; right: 1090px;"><i class="change">Course Name 1, Course Name 2</i></span></div></li>
+            <li><div class="size" style="position: relative;"><b>University Name</b> <span class="width"><i class="change">Degree, Year of Graduation</i></span></div></li>
+            <li><div class="size" style="position: relative;"><b>Relevant Courses</b> <span class="width"><i class="change">Course Name 1, Course Name 2</i></span></div></li>
         </ul>
         <button class="btn btn-dark" id="edit_junior">Edit</button>
+        <button class="btn btn-dark download" style="display: none;">Download</button>
+    </div>
        
     {% block script %}
         <script src="{% static 'builder/cv.js' %}"></script>

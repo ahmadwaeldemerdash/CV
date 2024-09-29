@@ -13,14 +13,29 @@ document.addEventListener('DOMContentLoaded', function () {
                 event.target.innerHTML = '' 
                 event.target.appendChild(text_area);
                 save.onclick = function(){
+                    foo.innerHTML = ''
                     foo.innerHTML = text_area.value
                     save.style.display = 'none';
+                    const download = document.querySelector('.download')
+                    download.style.display = 'block';
+                    download.onclick = function(){
+                    download.style.display = 'none';
+                    save.style.display = 'none';
+                    document.querySelector('#edit_junior').style.display = 'none';
+                    div = document.querySelector('.padding')
+                    html2pdf()
+                    .from(div)
+                    .set({
+                        html2canvas: {scale: 2},
+                        margin: 1,
+                        jsPDF: {orientation: "portrait"},
+                        filename: 'CV.pdf',
+                    })     
+                    .save()    
+                    }   
                 }
             }
         })
-        
     }
    })
-    
-    
 })

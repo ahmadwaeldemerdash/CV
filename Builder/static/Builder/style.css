@@ -50,3 +50,7 @@
 .padding {
     padding: 10px
 }
+
+.width {
+    position: absolute; right: 0; width: 1410px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
