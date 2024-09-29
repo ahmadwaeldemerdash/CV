@@ -1,58 +1,82 @@
 {% extends 'Builder/layout.html' %}
-
 {% load static %}
 {% block title %}
-    Senior Developer Template 
+    Senior Developer Template
 {% endblock %}
 {% block body %}
+    {% block style %}
+    <style>
+        body{
+            background: white;
+        }
+    </style>
+    {% endblock %}
+ 
+
+
     <div class="padding">
-    <div id="font">
-    <h1 style="text-align: center;">Your Name</h1>
-    <h3 style="text-align: center;">Senior Software Engineer</h3>
-    <hr style="border: 3px solid"></hr>
-    <div class="icons">
-        <i class="fa-solid fa-location-dot fa-2x spacing"></i> <span class="size">City, Country</span>&nbsp&nbsp
-        <i class="fa-solid fa-phone fa-2x spacing"></i><span class="size">Phone Number</span>
-        <i class="fa-solid fa-envelope fa-2x spacing"></i><span class="size">Email</span>
-        <i class="fa-brands fa-linkedin fa-2x spacing"></i><span class="size">LinkedIn</span>
-        <i class="fa-brands fa-github fa-2x spacing"></i><span class="size">GitHub</span>
-    </div>
+        <div id="font">
+            <h1 style="text-align: center;" class="change">Your Name</h1>
+            <h3 style="text-align: center;">Senior Software Engineer</h3>
+            <button class="btn btn-dark save" style="display: none; position: relative; right: 0;">Save</button>
+            <hr style="border: 3px solid"></hr>
+            <div class="icons">
+                <i class="fa-solid fa-location-dot fa-2x spacing"></i> <label class="size change">City, Country</label>
+                <i class="fa-solid fa-phone fa-2x spacing"></i><label class="size change">Phone Number</label>
+                <i class="fa-solid fa-envelope fa-2x spacing"></i><label class="size change">Email</label>
+                <i class="fa-brands fa-linkedin fa-2x spacing"></i><label class="size change">LinkedIn</label>
+                <i class="fa-brands fa-github fa-2x spacing"></i><label class="size change">GitHub</label>
+            </div>
 
-    <p><h1>Professional Experience</h1></p>
-    <hr style="border: 1px solid grey"></hr>
-    <ul>
-        <li><div class="size" style="position: relative;"><b>Lead Developer, Company Name</b> <span style="position: absolute; right: 265px;"><b>Managed a team of developers, led complex software projects, and optimized code performance.</b></span></div></li>
-        <li><div class="size" style="position: relative;"><b>Senior Developer, Previous Company</b> <span style="position: absolute; right: 233px;"><b>Designed and implemented scalable systems, mentored junior engineers, and ensured code quality.</b></span></div></li>
-    </ul>
+            <h1>Professional Experience</h1>
+            <hr style="border: 1px solid grey"></hr>
+            <ul>
+                <li><b>Lead Developer, Company</b>
+                    <p>Managed team and optimized code for major projects.</p>
+                </li>
+                <li><b>Senior Developer, Previous Company</b>
+                    <p>Designed scalable systems, mentored juniors, ensured code quality.</p>
+                </li>
+            </ul>
 
-    <p><h1>Technical Skills</h1></p>
-    <hr style="border: 1px solid grey"></hr>
-    <ul>
-        <li><div class="size" style="position: relative;"><b>Programming</b> <span style="position: absolute; right: 1090px;">Python, Java, C++</span></div></li>
-        <li><div class="size" style="position: relative;"><b>Frameworks</b> <span style="position: absolute; right: 1060px;">Django, Spring, React</span></div></li>
-        <li><div class="size" style="position: relative;"><b>Cloud Platforms</b> <span style="position: absolute; right: 1020px;">AWS, Azure, Google Cloud</span></div></li>
-        <li><div class="size" style="position: relative;"><b>Databases</b> <span style="position: absolute; right: 990px;">PostgreSQL, MongoDB, Redis</span></div></li>
-        <li><div class="size" style="position: relative;"><b>Tools</b> <span style="position: absolute; right: 1000px;">Docker, Kubernetes, Jenkins</span></div></li>
-    </ul>
+            <h1>Technical Skills</h1>
+            <hr style="border: 1px solid grey"></hr>
+            <ul>
+                <li><b>Programming:</b> <p>Python, Java, C++</p></li>
+                <li><b>Frameworks:</b> <p>Django, Spring, React</p></li>
+                <li><b>Cloud Platforms:</b> <p>AWS, Google Cloud</p></li>
+                <li><b>Databases:</b> <p>PostgreSQL, MongoDB</p></li>
+                <li><b>Tools:</b> <p>Docker, Jenkins</p></li>
+            </ul>
 
-    <h1>Projects</h1>
-    <hr style="border: 1px solid grey"></hr>
-    <ul>
-        <li><div class="size" style="position: relative;"><b>Project Name 1</b> <span style="position: absolute; right: 500px;">Developed and led a microservices architecture solution, improving scalability by 30%.</span></div></li>
-        <li><div class="size" style="position: relative;"><b>Project Name 2</b> <span style="position: absolute; right: 585px;">Architected a cloud-based platform that reduced infrastructure costs by 20%.</span></div></li>
-        <li><div class="size" style="position: relative;"><b>Project Name 3</b> <span style="position: absolute; right: 475px;">Spearheaded the development of a high-performance web application with 99.9% uptime.</span></div></li>
-    </ul>
+            <h1>Projects</h1>
+            <hr style="border: 1px solid grey"></hr>
+            <ul>
+                <li><b>Project 1</b>
+                    <p>Developed microservices, improving scalability by 30%.</p>
+                </li>
+                <li><b>Project 2</b>
+                    <p>Built cloud platform, reduced infrastructure costs by 20%.</p>
+                </li>
+                <li><b>Project 3</b>
+                    <p>Developed high-performance web app with 99.9% uptime.</p>
+                </li>
+            </ul>
 
-    <h1>Education</h1>
-    <hr style="border: 1px solid grey"></hr>
-    <ul>
-        <li><div class="size" style="position: relative;"><b>University Name</b> <span style="position: absolute; right: 840px;">Degree in Computer Science, Year of Graduation</span></div></li>
-        <li><div class="size" style="position: relative;"><b>Relevant Courses</b> <span style="position: absolute; right: 890px;">Advanced Algorithms, Distributed Systems</span></div></li>
-    </ul>
-    <button class="btn btn-dark" id="edit_senior">Edit</button>
-    
+            <h1>Education</h1>
+            <hr style="border: 1px solid grey"></hr>
+            <ul>
+                <li><b>University Name</b>
+                    <p>B.Sc. in Computer Science, Graduation Year</p>
+                </li>
+                <li><b>Relevant Courses:</b> <p>Algorithms, Distributed Systems</p></li>
+            </ul>
+
+            <p><button class="btn btn-dark edit">Edit</button></p>
+            <button class="btn btn-dark download" style="display: none;">PDF</button>
+        </div>
 
     {% block script %}
-    <script src="{% static 'Builder/CV.js' %}"></script>
-{% endblock %}
-{% endblock %}
+        <script src="{% static 'builder/cv.js' %}"></script>
+    {% endblock %}
+    {% endblock %}

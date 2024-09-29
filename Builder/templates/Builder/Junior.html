@@ -1,59 +1,69 @@
 {% extends 'Builder/layout.html' %}
 {% load static %}
 {% block title %}
-    Senior Developer Template 
+    Junior Developer Template
 {% endblock %}
 {% block body %}
+{% block style %}
+<style>
+    body{
+        background: white;
+    }
+</style>
+{% endblock %}
 
 <div class="padding">
     <div id="font">
-    <h1 style="text-align: center;" class="change">Your Name</h1>
-    <h3 style="text-align: center;">Junior Software Engineer</h3>
-    <button class="btn btn-dark" id="bar" style="display: none; position: relative; right: 0;">Save</button>
-    <hr style="border: 3px solid"></hr>
-    <div class="icons">
-        <i class="fa-solid fa-location-dot fa-2x spacing"></i> <i class="size change">City, Country</i>&nbsp&nbsp
-        <i class="fa-solid fa-phone fa-2x spacing"></i><i class="size change">Phone Number</i>
-        <i class="fa-solid fa-envelope fa-2x spacing"></i><i class="size change">Email</i>
-        <i class="fa-brands fa-linkedin fa-2x spacing"></i><i class="size change">LinkedIn</i>
-        <i class="fa-brands fa-github fa-2x spacing"></i><i class="size change">GitHub</i>
-    </div>
-
-    <p><h1>Activities</h1></p>
-    <hr style="border: 1px solid grey"></hr>
-    <ul>
-        <li><div class="size" style="position: relative;"><b>Leetcode</b> <span class="width">Solved <i class="change">Num</i> Problems</i> (<i class="change">Num</i> Easy, <i class="change">Num</i> Medium, <i class="change">Num</i> Hard)</span></div></li>
-        <li><div class="size" style="position: relative;"><b>CodeForces</b> <span class="width">Solved <i class="change">Num</i> Problems</b></span></div></li>
-    </ul>
-    <p><h1>Technical Skills</h1></p>
-    <hr style="border: 1px solid grey"></hr>
-    <ul>
-        <li><div class="size" style="position: relative;"><b>Programming</b> <span class="width"><i class="change">Programming Language(s) Ex. C#</i></span></div></li>
-        <li><div class="size" style="position: relative;"><b>Frameworks</b> <span class="width"><i class="change">Framework(s) Ex.Django</i></span></div></li>
-        <li><div class="size" style="position: relative;"><b>Operating Systems</b> <span class="width"><i class="change">Operating System(s) Ex.Windows</i></span></div></li>
-        <li><div class="size" style="position: relative;"><b>Databases</b> <span class="width"><i class="change">Databases Ex. PostgreSQL</i></span></div></li>
-        <li><div class="size" style="position: relative;"><b>Tools</b><span class="width"><i class="change">Tool</i></span></div></li>
+        <h1 style="text-align: center;" class="change">Your Name</h1>
+        <h3 style="text-align: center;">Junior Software Engineer</h3>
+        <button class="btn btn-dark save" style="display: none; position: relative; right: 0;">Save</button>
+        <hr style="border: 3px solid"></hr>
+        
+        <div class="icons">
+            <i class="fa-solid fa-location-dot fa-2x spacing"></i> <label class="size change">City, Country</label>
+            <i class="fa-solid fa-phone fa-2x spacing"></i> <label class="size change">Phone Number</label>
+            <i class="fa-solid fa-envelope fa-2x spacing"></i> <label class="size change">Email</label>
+            <i class="fa-brands fa-linkedin fa-2x spacing"></i> <label class="size change">LinkedIn</label>
+            <i class="fa-brands fa-github fa-2x spacing"></i> <label class="size change">GitHub</label>
         </div>
+
+        <h1>Activities</h1>
+        <hr style="border: 1px solid grey"></hr>
+        <ul>
+            <li><b>Leetcode:</b> <p>Solved <i class="change">Num</i> Problems (Easy: <i class="change">Num</i>, Medium: <i class="change">Num</i>, Hard: <i class="change">Num</i>)</p></li>
+            <li><b>CodeForces:</b> <p>Solved <i class="change">Num</i> Problems</p></li>
+        </ul>
+
+        <h1>Technical Skills</h1>
+        <hr style="border: 1px solid grey"></hr>
+        <ul>
+            <li><b>Programming:</b> <p><i class="change">Programming Language(s) (e.g. C#)</i></p></li>
+            <li><b>Frameworks:</b> <p><i class="change">Framework(s) (e.g. Django)</i></p></li>
+            <li><b>Operating Systems:</b> <p><i class="change">Operating System(s) (e.g. Windows)</i></p></li>
+            <li><b>Databases:</b> <p><i class="change">Databases (e.g. PostgreSQL)</i></p></li>
+            <li><b>Tools:</b> <p><i class="change">Tool (e.g. Git, Docker)</i></p></li>
+        </ul>
+
         <h1>Projects</h1>
         <hr style="border: 1px solid grey"></hr>
         <ul>
-            <li><div class="size"style="position: relative;"><b>Project Name 1</b><span class="width"><i class="change">Short description of the project, key technologies used.</i></span></div></li>
-            <li><div class="size" style="position: relative;"><b>Project Name 2</b><span class="width"><i class="change">Short description of the project, key technologies used.</i></span></div></li>
-            <li><div class="size" style="position: relative;"><b>Project Name 3</b><span class="width"><i class="change">Short description of the project, key technologies used.</i></span></div></li>      
+            <li><b>Project Name 1:</b> <p><i class="change">Brief description, key technologies used.</i></p></li>
+            <li><b>Project Name 2:</b> <p><i class="change">Brief description, key technologies used.</i></p></li>
+            <li><b>Project Name 3:</b> <p><i class="change">Brief description, key technologies used.</i></p></li>
         </ul>
-
 
         <h1>Education</h1>
         <hr style="border: 1px solid grey"></hr>
         <ul>
-            <li><div class="size" style="position: relative;"><b>University Name</b> <span class="width"><i class="change">Degree, Year of Graduation</i></span></div></li>
-            <li><div class="size" style="position: relative;"><b>Relevant Courses</b> <span class="width"><i class="change">Course Name 1, Course Name 2</i></span></div></li>
+            <li><b>University Name:</b> <p><i class="change">Degree, Year of Graduation</i></p></li>
+            <li><b>Relevant Courses:</b> <p><i class="change">Course Name 1, Course Name 2</i></p></li>
         </ul>
-        <button class="btn btn-dark" id="edit_junior">Edit</button>
-        <button class="btn btn-dark download" style="display: none;">Download</button>
+
+        <p><button class="btn btn-dark edit">Edit</button></p>
+        <button class="btn btn-dark download" style="display: none;">PDF</button>
     </div>
-       
-    {% block script %}
-        <script src="{% static 'builder/cv.js' %}"></script>
-    {% endblock %}
+
+{% block script %}
+    <script src="{% static 'builder/cv.js' %}"></script>
+{% endblock %}
 {% endblock %}

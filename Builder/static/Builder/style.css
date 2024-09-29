@@ -1,7 +1,13 @@
 .body {
     
-    margin: 20px
-    
+    margin: 20px;
+    color: black
+}
+body {
+    background: url('photo-1486312338219-ce68d2c6f44d.avif');
+    background-size: cover; 
+    height: 100vh; 
+    background-position: center;
 }
 @keyframes header{
     from {
@@ -23,7 +29,7 @@
 }
 .slogan {
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     font-family: Georgia,'Times New Roman', Times, serif;
     
 }
